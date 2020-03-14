@@ -1,9 +1,6 @@
 package graph;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author sunjh
@@ -46,7 +43,8 @@ public class Kruskal {
         edges.add(new Edge(4, 5, 2));
         edges.add(new Edge(4, 6, 8));
         edges.add(new Edge(5, 6, 9));
-        kruskal(nodes, edges);
+        test();
+        //kruskal(nodes, edges);
     }
 
     public static void kruskal(String[] nodes, List<Edge> edges) {
@@ -77,5 +75,46 @@ public class Kruskal {
         for (Edge edge : kruskals) {
             System.out.println("[" + nodes[edge.start] + "," + nodes[edge.end] + "," + edge.weight + "]");
         }
+    }
+
+    public static void test() {
+        //初始化数据
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
+        }
+        //代码段1
+        Iterator<Integer> it1 = list.iterator();
+        while (it1.hasNext()) {
+            int next = (int) it1.next();
+            if (next == 5) {
+                it1.remove();
+            }
+        }
+        System.out.println(list);
+
+        //代码段2
+        for (Iterator<Integer> iterator = list.iterator(); iterator.hasNext(); ) {
+            Integer ele = iterator.next();
+            if (ele.equals(5)) {
+                list.remove(1);
+            }
+        }
+        System.out.println(list);
+//        for (int i=0;i<list.size();i++){
+//            if (list.get(i) == 8){
+//                list.add(1);
+//            }
+//            System.out.println(list.get(i));
+//        }
+//        for (int i:list){
+//            System.out.println(i);
+//            if (i == 5){
+//                list.remove(i);
+//            }
+//        }
+
+
+
     }
 }
