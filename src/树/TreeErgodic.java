@@ -86,4 +86,19 @@ public class TreeErgodic {
         t1_2.right = t2_4;
         return root;
     }
+
+    /**
+     * @author sunjh
+     * @date 2020/3/13 23:32
+     */
+    public static class TreeNode {
+        public String value;
+
+        public TreeNode(String value) {
+            this.value = value;
+        }
+
+        public TreeNode left;
+        public TreeNode right;
+    }
 }
