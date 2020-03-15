@@ -1,4 +1,4 @@
-package graph;
+package 图;
 
 /**
  * @author sunjh
